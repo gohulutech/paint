@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/prueba_cchart
+/Interfaces/bin/Debug
+/Interfaces/obj/Debug
+/Interfaz/obj
+/Launcher/bin/Debug
+/Launcher/obj/Debug
+/Logica/bin/Debug
+/Logica/obj/Debug
+/Presentacion/bin/Debug
+/Presentacion/obj/Debug
