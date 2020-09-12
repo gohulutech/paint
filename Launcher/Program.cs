@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
+using System.Windows.Forms;
 
 namespace Launcher
 {
@@ -13,10 +13,8 @@ namespace Launcher
         [STAThread]
         static void Main(string[] args)
         {
-            Modelo modelo = new Modelo();
-            modelo.IniciarVista();
-
-            Console.ReadKey();
+            Application.EnableVisualStyles();
+            Application.Run(new Modelo());
         }
     }
 }

@@ -10,18 +10,14 @@ using Logica;
 
 namespace Presentacion
 {
-    public class Modelo
+    public class Modelo : ApplicationContext
     {
         private Sistema _sistema;
         private Vista vista;
         
         public Modelo()
         {
-            vista = Factory.GetVista();
-        }
-
-        public void IniciarVista()
-        {
+            vista = Vista.GetVista();
             vista.Show();
             vista.OnSumar += Vista_OnSumar;
         }

@@ -22,7 +22,7 @@ namespace Interfaces
             InitializeComponent();
         }
 
-        public static Vista MostrarVista()
+        public static Vista GetVista()
         {
             Vista vista = new Vista();
             return vista;
