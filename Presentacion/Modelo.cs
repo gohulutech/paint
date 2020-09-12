@@ -14,15 +14,16 @@ namespace Presentacion
     {
         private Sistema _sistema;
         private Vista vista;
-        private string v1;
-        private string v2;
-
-        public string _V1 { get => v1; set => v1 = value; }
-        public string _V2 { get => v2; set => v2 = value; }
         
         public Modelo()
         {
             vista = Factory.GetVista();
+        }
+
+        public void IniciarVista()
+        {
+            vista.Show();
+            vista.OnSumar += Vista_OnSumar;
         }
 
         private void Vista_OnSumar()
@@ -34,7 +35,7 @@ namespace Presentacion
         {
             _sistema = new Sistema();
             int _resultado;
-            
+
             try
             {
                 _sistema._valor1 = Convert.ToInt32(vista.GetValor1());
@@ -47,12 +48,6 @@ namespace Presentacion
             {
                 vista.SetResultado("VALORES INCORRECTOS");
             }
-        }
-
-        public void IniciarVista()
-        {
-            vista.Show();
-            vista.OnSumar += Vista_OnSumar;
         }
     }
 }
